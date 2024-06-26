@@ -240,6 +240,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3945101587728951190}
+  - component: {fileID: 64166357368502396}
   m_Layer: 0
   m_Name: Campanario_Nicolas_48675751 1
   m_TagString: Untagged
@@ -268,6 +269,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -37.119003, y: 0, z: 0}
+--- !u!64 &64166357368502396
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3945101587729251254}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 0}
 --- !u!1 &3945101587729251256
 GameObject:
   m_ObjectHideFlags: 0
