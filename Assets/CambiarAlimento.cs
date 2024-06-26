@@ -18,8 +18,8 @@ public class CambiarAlimento : MonoBehaviour
     }
     public void CambioDeAlimento()
     {
-        //Destroy(spawn.obj[spawn.numobj2]);
-        //Destroy(spawn.obj[spawn.numobj]);
+        spawn.obj[spawn.num1].SetActive(false);
+        spawn.obj[spawn.num2].SetActive(false);
         spawn.Alimento1();
         spawn.Alimento2();
     }
