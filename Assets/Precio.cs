@@ -7,12 +7,13 @@ using UnityEngine.UI;
 public class Precio : MonoBehaviour
 {
     public Producto producto;
-    public Text presupuestoTexto; 
+    public Text presupuestoTexto;
+    public int presupuesto = Random.Range(10, 50);
 
     // Start is called before the first frame update
     void Start()
     {
-        int presupuesto = Random.Range(10, 50);
+        
         presupuestoTexto.text = "Presupuesto: " + presupuesto.ToString();
     }
 
