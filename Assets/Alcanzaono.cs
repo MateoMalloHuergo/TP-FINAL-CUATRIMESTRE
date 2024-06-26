@@ -13,7 +13,7 @@ public class Alcanzaono : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        panelNotificaciones.SetActive(false);
     }
     public void alcanza()
     {
