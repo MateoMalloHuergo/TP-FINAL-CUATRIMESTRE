@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class Alcanzaono : MonoBehaviour
 {
-    public Producto producto;
     public Precio cash;
     public Text JugarOtra;
     public GameObject panelNotificaciones;
@@ -17,7 +16,7 @@ public class Alcanzaono : MonoBehaviour
     }
     public void alcanza()
     {
-        if (producto.precio < cash.presupuesto )
+        if (0 < cash.presupuesto )
         {
             Debug.Log("Alcanza y sobra");
         }
@@ -25,7 +24,7 @@ public class Alcanzaono : MonoBehaviour
 
     public void Noalcanza() 
     { 
-     if (producto.precio > cash.presupuesto)
+     if (0 > cash.presupuesto)
         {
             Debug.Log("No alcanza");
         }
@@ -33,7 +32,7 @@ public class Alcanzaono : MonoBehaviour
 
     public void AlcanzaJusto() 
     { 
-        if (producto.precio == cash.presupuesto)
+        if (0 == cash.presupuesto)
         {
             Debug.Log("Alcanza justo");
         }
@@ -47,7 +46,7 @@ public class Alcanzaono : MonoBehaviour
 
     public void JugarOtraVez()
     {
-        //falta esto: if (resultado es correcto) { JugarOtra.text = "Reiniciar el desafío";}
+        //falta if (resultado es correcto) { JugarOtra.text = "Reiniciar el desafío";}
         //else { JugarOtra.text = "Volver a intentarlo";}
         int resultado = 2; //esto se borra
         //en este if va si el resultado es correcto

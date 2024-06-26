@@ -86,7 +86,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3053776215872194740}
-  - component: {fileID: 114669407005331832}
   m_Layer: 0
   m_Name: "Nu\xF1ez Valcarce_Ignacio_48044118"
   m_TagString: Untagged
@@ -109,16 +108,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114669407005331832
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3053776215872558228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dafabfe553119de4cba4294ba0038471, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  precio: 15
