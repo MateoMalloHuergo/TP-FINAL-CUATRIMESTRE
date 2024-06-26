@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class Alcanzaono : MonoBehaviour
 {
-    public Producto producto = new Producto();
-    public Precio cash = new Precio();
+    public Producto producto;
+    public Precio cash;
     // Start is called before the first frame update
     void Start()
     {
