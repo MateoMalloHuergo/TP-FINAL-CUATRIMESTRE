@@ -20,7 +20,7 @@ public class Spawner : MonoBehaviour
 
     public void Alimento1()
     {
-        numobj = Random.Range(0, obj.Length);
+        numobj = Random.Range(0, obj.Length -1 );
         num1 = numobj;
         Vector3 Posicion1 = new Vector3(-4, 0, 0.2f);
         Instantiate(obj[numobj], Posicion1, Quaternion.identity).SetActive(true);
