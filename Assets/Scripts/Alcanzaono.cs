@@ -9,32 +9,66 @@ public class Alcanzaono : MonoBehaviour
     public Precio cash;
     public Text JugarOtra;
     public GameObject panelNotificaciones;
+    public Text textNotificaciones;
+    bool resultado;
     // Start is called before the first frame update
     void Start()
     {
         panelNotificaciones.SetActive(false);
     }
-    public void alcanza()
+
+    public void Alcanza()
     {
-        if (0 < cash.presupuesto )
+        if (cash.sumaprecio < cash.presupuesto)
         {
-            Debug.Log("Alcanza y sobra");
+            panelNotificaciones.SetActive(true);
+            textNotificaciones.text = "RESULTADO CORRECTO";
+            resultado = true;
+            JugarOtra.text = "REINICIAR DESAFIO";
+        }
+        else
+        {
+            panelNotificaciones.SetActive(true);
+            textNotificaciones.text = "RESULTADO INCORRECTO";
+            resultado = false;
+            JugarOtra.text = "VOLVER A INTENTARLO";
         }
     }
 
-    public void Noalcanza() 
+    public void NoAlcanza() 
     { 
-     if (0 > cash.presupuesto)
+        if (cash.presupuesto < cash.sumaprecio)
         {
-            Debug.Log("No alcanza");
+            panelNotificaciones.SetActive(true);
+            textNotificaciones.text = "RESULTADO CORRECTO";
+            resultado = true;
+            JugarOtra.text = "REINICIAR DESAFIO";
         }
+        else
+        {
+            panelNotificaciones.SetActive(true);
+            textNotificaciones.text = "RESULTADO INCORRECTO";
+            resultado = false;
+            JugarOtra.text = "VOLVER A INTENTARLO";
+        }
+
     }
 
     public void AlcanzaJusto() 
-    { 
-        if (0 == cash.presupuesto)
+    {
+        if (cash.sumaprecio == cash.presupuesto)
         {
-            Debug.Log("Alcanza justo");
+            panelNotificaciones.SetActive(true);
+            textNotificaciones.text = "RESULTADO CORRECTO";
+            resultado = true;
+            JugarOtra.text = "REINICIAR DESAFIO";
+        }
+        else
+        {
+            panelNotificaciones.SetActive(true);
+            textNotificaciones.text = "RESULTADO INCORRECTO";
+            resultado = false;
+            JugarOtra.text = "VOLVER A INTENTARLO";
         }
     }
 
@@ -46,11 +80,7 @@ public class Alcanzaono : MonoBehaviour
 
     public void JugarOtraVez()
     {
-        //falta if (resultado es correcto) { JugarOtra.text = "Reiniciar el desafío";}
-        //else { JugarOtra.text = "Volver a intentarlo";}
-        int resultado = 2; //esto se borra
-        //en este if va si el resultado es correcto
-        if (resultado == 3) {
+        if (resultado) {
             SceneManager.LoadScene("SampleScene");
         }
         else

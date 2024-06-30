@@ -7,19 +7,19 @@ using UnityEngine.UI;
 public class Precio : MonoBehaviour
 {
     public Spawner spawn;
-    public int[] precioprod = new int[7];
+    int[] precioprod = new int [7];
     public Text presupuestoTexto;
     public Text Alimento1;
     public Text Alimento2;
     public int presupuesto;
-    int sumaprecio;
+    public int sumaprecio;
     
     // Start is called before the first frame update
     void Start()
     {
         presupuesto = Random.Range(10, 50);
         
-        presupuestoTexto.text = "Presupuesto: " + presupuesto.ToString();
+        presupuestoTexto.text = "PRESUPUESTO: " + presupuesto.ToString();
         
         precioprod[0] = 30;
         precioprod[1] = 20;
@@ -38,10 +38,9 @@ public class Precio : MonoBehaviour
         string precio2 = precioprod[spawn.num2].ToString();
 
         // Actualiza los textos de Alimento1 y Alimento2 con los precios correctos
-        Alimento1.text = "Precio: " + precio1;
-        Alimento2.text = "Precio: " + precio2;
+        Alimento1.text = "PRECIO: " + precio1;
+        Alimento2.text = "PRECIO: " + precio2;
         //Alimento2.text = "Precio: " + precioprod[spawn.num2].ToString();
-
     }
 
     // Update is called once per frame
