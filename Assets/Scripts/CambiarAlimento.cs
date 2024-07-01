@@ -18,6 +18,7 @@ public class CambiarAlimento : MonoBehaviour
     }
     public void CambioDeAlimento()
     {
+        // No se uso pero el objetivo era destruir el alimento anterior y que se genere otro.
         Destroy(spawn.obj[spawn.num1]);
         Destroy(spawn.obj[spawn.num2]);
         spawn.Alimento1();

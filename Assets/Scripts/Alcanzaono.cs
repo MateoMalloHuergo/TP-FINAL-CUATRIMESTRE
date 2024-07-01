@@ -19,7 +19,9 @@ public class Alcanzaono : MonoBehaviour
 
     public void Alcanza()
     {
-        if (cash.sumaprecio < cash.presupuesto)
+        //Si tu presupuesto es mayor que la suma de los productos. Se muestra el panel dependiendo de si tuviste razón o no.
+        //Se activa al darle click al botón del UI
+        if (cash.sumaprecio < cash.presupuesto) 
         {
             panelNotificaciones.SetActive(true);
             textNotificaciones.text = "RESULTADO CORRECTO";
@@ -80,6 +82,7 @@ public class Alcanzaono : MonoBehaviour
 
     public void JugarOtraVez()
     {
+        // Si le das a volver a jugar despues del panel. Te lo vuelve a cargar.
         if (resultado) {
             SceneManager.LoadScene("SampleScene");
         }
@@ -91,6 +94,7 @@ public class Alcanzaono : MonoBehaviour
 
     public void Salir()
     {
+        // Si le das a Salir, te saca del juego. Cambiando de escena.
         SceneManager.LoadScene("SeleccionarJuegos");
     }
 

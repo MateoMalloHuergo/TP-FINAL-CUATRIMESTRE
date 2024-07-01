@@ -17,10 +17,12 @@ public class Precio : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        presupuesto = Random.Range(10, 50);
+        // Presupuesto obtiene un valor random entre los dos valores.
+        presupuesto = Random.Range(30, 60);
         
         presupuestoTexto.text = "PRESUPUESTO: " + presupuesto.ToString();
         
+        // Lista con los precios de cada producto.
         precioprod[0] = 30;
         precioprod[1] = 20;
         precioprod[2] = 15;
@@ -28,12 +30,11 @@ public class Precio : MonoBehaviour
         precioprod[4] = 15;
         precioprod[5] = 15;
         precioprod[6] = 10;
-        
-        Debug.Log("spawn.num1: " + spawn.num1);
-        Debug.Log("spawn.num2: " + spawn.num2);
        
+        // Suma de ambos precios para despues compararlos con el presupuesto.
         sumaprecio = precioprod[spawn.num1] + precioprod[spawn.num2];
         
+        // Cambiamos el valor de precioprod a un string para poder ponerlo en un texto.
         string precio1 = precioprod[spawn.num1].ToString();
         string precio2 = precioprod[spawn.num2].ToString();
 
